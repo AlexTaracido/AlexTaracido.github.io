@@ -7,8 +7,10 @@ font-weight: bolder;
 body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 font-size:12pt;
-
-    margin:3%;
+    margin:2%;
+    margin-left:3%;
+    margin-right:3%;
+    margin-bottom:7%;
 }
 
 .body-text{
@@ -18,18 +20,27 @@ font-size:12pt;
 
 }
 
-.container1{
-    width: 27%;
-    float:left;
-    
+.container1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 27%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /* centers your content vertically */
+  align-items: flex-start;  /* keeps content aligned left */
+  background-color: white;  /* optional */
+  padding: 3%;
+  box-sizing: border-box;
 }
 
 .container1 img {
-    width: 100%;         /* makes the image fill the container’s width */
-    height: 100%;        /* makes it fill the height */
-    object-fit: cover;   /* keeps proportions, crops edges instead of squishing */
-  }
-
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+  
 /* strong, explicit footer layout to force a horizontal row */
 .site-footer {
     position: fixed;
@@ -89,31 +100,27 @@ font-size:12pt;
     gap: 15px; /* controls spacing between icons */
   }
 
-.container2{
-width: 68%;
-margin-left:5%;
-float:right;
-
-}
-.column{
-width:50%;
-float:left;
-}
-
-.column img {
-    width: 100%;      /* fills the column width */
-    height: auto;     /* keeps correct proportions */
-    display: block;   /* removes small gaps below images */
-    border-radius: 6px; /* optional: slightly rounded corners */
+  .container2 {
+    margin-left: 30%;  /* space for fixed left section */
+    padding-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-start;
   }
-
-
-.filters {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
+  
+  .column {
+    flex: 1 1 45%;     /* 2 columns per row, adjusts nicely */
+    box-sizing: border-box;
+  }
+  
+  .column img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+  }
 
 .filter {
   color: #555;
