@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <a class="fun-button" href="index.html">Home Page</a>
+  <div class="filters">
+    <span class="filter active" data-category="all">[all]</span>
+    <span class="filter" data-category="typography">[typography]</span>
+    <span class="filter" data-category="branding">[branding]</span>
+    <span class="filter" data-category="illustration">[illustration]</span>
+  </div>
+
+  <div class="gallery">
+    <img src="Images/typo1.png" class="item" data-category="typography">
+    <img src="Images/brand1.png" class="item" data-category="branding">
+    <img src="Images/illust1.png" class="item" data-category="illustration">
+    <img src="Images/brand2.png" class="item" data-category="branding">
+  </div>
+
+  <script>
+    const filters = document.querySelectorAll('.filter');
+    const items = document.querySelectorAll('.item');
+
+    filters.forEach(filter => {
+      filter.addEventListener('click', () => {
+        filters.forEach(f => f.classList.remove('active'));
+        filter.classList.add('active');
+
+        const category = filter.dataset.category;
+
+        items.forEach(item => {
+          if (category === 'all' || item.dataset.category === category) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
