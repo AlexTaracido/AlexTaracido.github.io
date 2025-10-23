@@ -4,9 +4,20 @@ font-size:30pt;
 font-weight: bolder;
 }
 
+@font-face {
+  font-family: "League Spartan";
+  src: url("LeagueSpartan-VariableFont.ttf") format("truetype");
+  font-style: normal;
+}
+
+body {
+  font-family: "MISBHV Arial Narrow", Arial, sans-serif;
+}
+
 body{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'League Spartan';
 font-size:12pt;
+font-weight: 500;
     margin:2%;
     margin-left:3%;
     margin-right:3%;
@@ -71,7 +82,6 @@ font-size:12pt;
   
   /* icons */
   .site-footer img {
-    width: 36px;
     height: 36px;
     display: block;  /* fine inside flex children */
     border: none;
@@ -185,5 +195,137 @@ padding:1.2%;
 background-color:blue;
 color:white;
 transition: .2s ease-in;
+
+}
+
+/*misbhv*/
+
+.mbcontainer1 {
+  padding-top: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.mbcolumn1 {
+  flex: 1 95%;     /* 2 columns per row, adjusts nicely */
+  box-sizing: border-box;
+}
+
+.mbcolumn1 img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+}
+
+.brand-text {
+width: 90%;
+margin:5%;
+float:left;
+
+}
+
+.brand-column {
+  width:66%;
+  float:left;
+  
+}
+.brand-column-left{
+  width:30%;
+  margin-right:3%;
+  float:left;
+  
+}
+
+
+.brand-text h1 {
+  font-family: 'League Spartan';
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.brand-text h2 {
+  font-family: 'League Spartan';
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: 0.05em; /* Adds 0.1em of space, relative to the font size */
+}
+
+.brand-text p {
+  font-family: 'League Spartan';
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.black-highlight{
+  background-color: black;
+  padding: 5px 25px;
+  color:white;
+  font-size:20pt;
+}
+
+.brand-section{
+  width: 100%;
+  float:left;
+  margin-top:3%;
+
+
+}
+.brand40{
+  width: 35%;
+  float:left;
+  margin-right:5%;
+
+}
+.brand60{
+  width: 60%;
+  float:left;
+  
+  
+
+}
+
+.brand100{
+width:100%;
+float:left;
+
+}
+.brand100-image{
+  width:100%;
+  float:left;
+  margin-top:2%;
+  }
+
+.brand-pillars{
+
+
+}
+.brand-overview{
+
+
+}
+.brand-title{
+  padding-bottom:1%;
+  border-bottom: black solid 2px;
+  width: fit-content;
+  margin-bottom:-2%;
+font-size:2rem;
+}
+
+.typography-section{
+
+}
+.color-palette{
+
+
+}
+.spacer{
+height:355rem;
 
 }
