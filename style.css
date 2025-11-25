@@ -143,16 +143,18 @@ font-weight: 500;
 }
 
 .gallery {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+display: flex;
 gap: 10px;
 transition: all 0.3s ease;
 }
 
 .item {
-width: 100%;
-height: auto;
+object-fit: cover;
+width: 335px;
+height: 200px;
 transition: opacity 0.4s ease, transform 0.4s ease;
+overflow: hidden;
+border-radius: 10px;
 }
 
 .hidden {
@@ -162,11 +164,7 @@ pointer-events: none;
 position: absolute;
 }
 
-.item {
-  width: 200px;
-  height: auto;
-  transition: opacity 0.3s, transform 0.3s;
-}
+
 
 .hidden {
   opacity: 0;
@@ -185,18 +183,24 @@ position: absolute;
     opacity: 0.95;
 }
 
-.fun-button{
-padding:1%;
-background-color:yellow;
-color:black;
+.fun-button {
+  display: inline-block; /* ensures margin works */
+  top: 0;
+  color: black;
+  padding: 10px; 
+  border: 1px solid black;
+  border-radius: 2px;
+  position: relative;
+  transition: all 0.1s ease-in;
+  margin-top: 20px; /* space above */
 }
-.fun-button:hover{
-padding:1.2%;
-background-color:blue;
-color:white;
-transition: .2s ease-in;
 
+.fun-button:hover {
+  top: -5px;
+  opacity: 0.95;
 }
+
+
 
 /*misbhv*/
 
@@ -311,10 +315,10 @@ float:left;
 
 }
 .brand-title{
-  padding-bottom:1%;
+  padding-bottom:0;
   border-bottom: black solid 2px;
   width: fit-content;
-  margin-bottom:-2%;
+  margin-bottom:-1.5rem;
 font-size:2rem;
 }
 
@@ -327,6 +331,11 @@ font-size:2rem;
 }
 .spacer{
 height:355rem;
+
+}
+
+body h2{
+margin-bottom:-1rem;
 
 }
 
