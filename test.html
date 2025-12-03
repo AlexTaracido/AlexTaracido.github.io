@@ -14,44 +14,50 @@
     <span class="filter" data-category="typography">[typography]</span>
     <span class="filter" data-category="branding">[branding]</span>
     <span class="filter" data-category="illustration">[illustration]</span>
+    <span class="filter" data-category="motion">[motion]</span>
   </div>
 
   <div class="gallery">
     <a href="misbhv.html">
-    <img src="Images/misbhv-embroidery-mockup.png" class="project-button item" data-category="typography">
-    </a>
-    <a href="jumpstart.html">
-    <img src="Images/jumpstart-phone-mockup.png" class="project-button item" data-category="branding">
+    <img src="Images/misbhv-embroidery-mockup.png" class="project-button item" data-category="typography branding">
     </a>
     <a href="montreal.html">
-    <img src="Images/montreal-tote-mockup.png" class="project-button item" data-category="illustration">
+    <img src="Images/Red Bus Mockup copy.png" class="project-button item" data-category="branding illustration">
     </a>
-    <a href="misbhv.html">
-    <img src="Images/misbhv-embroidery-mockup.png" class="project-button item" data-category="branding">
+    <a href="jumpstart.html">
+    <img src="Images/jumpstart-logo-animation.gif" class="project-button item" data-category="branding motion">
     </a>
+    <a href="Night-Gallery.html">
+    <img src="Images/Business Cards Mockups copy.png" class="project-button item" data-category="branding typography">
+    </a>
+    <a href="Estados.html">
+      <img src="Images/Estados.png" class="project-button item" data-category="typography illustration">
+      </a>
   </div>
 
-  <script>
-    const filters = document.querySelectorAll('.filter');
-    const items = document.querySelectorAll('.item');
+<script>
+const filters = document.querySelectorAll('.filter');
+const items = document.querySelectorAll('.item');
 
-    filters.forEach(filter => {
-      filter.addEventListener('click', () => {
-        filters.forEach(f => f.classList.remove('active'));
-        filter.classList.add('active');
+filters.forEach(filter => {
+  filter.addEventListener('click', () => {
+    filters.forEach(f => f.classList.remove('active'));
+    filter.classList.add('active');
 
-        const category = filter.dataset.category;
+    const category = filter.dataset.category;
 
-        items.forEach(item => {
-          if (category === 'all' || item.dataset.category === category) {
-            item.classList.remove('hidden');
-          } else {
-            item.classList.add('hidden');
-          }
-        });
-      });
+    items.forEach(item => {
+      const categories = item.dataset.category.split(" ");
+
+      if (category === 'all' || categories.includes(category)) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
     });
-  </script>
+  });
+});
+</script>
 
 
 <footer class="site-footer">

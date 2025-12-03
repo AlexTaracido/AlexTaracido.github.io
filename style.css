@@ -5,8 +5,8 @@ font-weight: bolder;
 }
 
 @font-face {
-  font-family: "League Spartan";
-  src: url("LeagueSpartan-VariableFont.ttf") format("truetype");
+  font-family: "CalSans-Regular";
+  src: url("Fonts/CalSans-Regular.ttf") format("truetype");
   font-style: normal;
 }
 
@@ -15,9 +15,11 @@ body {
 }
 
 body{
-    font-family:'League Spartan';
+    font-family:'CalSans-Regular';
+    line-height: 19px;
 font-size:12pt;
 font-weight: 500;
+letter-spacing: 0.03em;
     margin:2%;
     margin-left:3%;
     margin-right:3%;
@@ -35,13 +37,12 @@ font-weight: 500;
   position: fixed;
   top: 0;
   left: 0;
-  width: 27%;
+  width: 30%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;  /* centers your content vertically */
   align-items: flex-start;  /* keeps content aligned left */
-  background-color: white;  /* optional */
   padding: 3%;
   box-sizing: border-box;
 }
@@ -143,9 +144,9 @@ font-weight: 500;
 }
 
 .gallery {
-display: flex;
-gap: 10px;
-transition: all 0.3s ease;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 10px;
 }
 
 .item {
@@ -157,19 +158,13 @@ overflow: hidden;
 border-radius: 10px;
 }
 
-.hidden {
-opacity: 0;
-transform: scale(0.8);
-pointer-events: none;
-position: absolute;
-}
-
 
 
 .hidden {
-  opacity: 0;
-  transform: scale(0.8);
+  opacity: 0.25;
+  transform: scale(0.9);
   pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 /*project button*/
@@ -187,6 +182,7 @@ position: absolute;
   display: inline-block; /* ensures margin works */
   top: 0;
   color: black;
+  background-color: #ffffff;
   padding: 10px; 
   border: 1px solid black;
   border-radius: 2px;
@@ -215,6 +211,14 @@ position: absolute;
 .mbcolumn1 {
   flex: 1 95%;     /* 2 columns per row, adjusts nicely */
   box-sizing: border-box;
+}
+
+.mbcolumn2 {
+  flex: 1 1 100%;       /* full width of parent */
+  max-width: 100%;      /* never exceed parent */
+  box-sizing: border-box;
+  border-radius: 1%;
+  margin-top:2%;
 }
 
 .mbcolumn1 img {
@@ -316,9 +320,8 @@ float:left;
 }
 .brand-title{
   padding-bottom:0;
-  border-bottom: black solid 2px;
   width: fit-content;
-  margin-bottom:-1.5rem;
+  margin-bottom:-1rem;
 font-size:2rem;
 }
 
@@ -330,12 +333,13 @@ font-size:2rem;
 
 }
 .spacer{
-height:355rem;
+height:297rem;
 
 }
 
 body h2{
-margin-bottom:-1rem;
+margin-bottom:-.75rem;
+line-height:25px;
 
 }
 
