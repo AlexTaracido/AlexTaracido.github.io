@@ -343,7 +343,7 @@ float:left;
 .brand-title{
   padding-bottom:0;
   width: fit-content;
-  margin-bottom:-1rem;
+  margin-bottom:1rem;
 font-size:2rem;
 }
 
@@ -355,7 +355,7 @@ font-size:2rem;
 
 }
 .spacer{
-height:10rem;
+height:3rem;
 
 }
 
@@ -375,5 +375,25 @@ line-height:25px;
   width: 100%;
 margin-top:-4rem;
 }
-  
+.home-desc {
+
+  margin-top: 250px;
+}  
+
 /*test*/
+
+@media screen and (max-width: 800px) {
+  .container1 {
+    width: 100%;
+    position: relative;
+    height:65vh;
+  }
+  .container2 {
+    width:100%;
+    margin-left:0;
+  }
+  .home-desc {
+
+    margin-top: 5%;
+  }  
+}
