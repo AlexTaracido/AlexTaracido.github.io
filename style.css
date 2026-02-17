@@ -25,6 +25,11 @@ letter-spacing: 0.03em;
     margin-right:3%;
     margin-bottom:7%;
     padding-top: 60px;
+    background-image: url('Images/Background Texture.png');
+
+    background-size: cover;        /* fills screen */
+    background-position: center;   /* keeps it centered */
+    background-repeat: no-repeat;  /* prevents tiling */
 }
 
 .body-text{
@@ -169,7 +174,7 @@ to{
     opacity: 0.6;
     font-size: 0.8rem;
     padding-top: 1.5rem;
-    padding-bottom: calc(var(--footer-space)+7);
+    padding-bottom: 10px;
     float:left;
     width:100%;
     margin-left:auto;
@@ -472,7 +477,7 @@ font-size:2rem;
 
 }
 .bottom-spacer{
-height: var(--footer-space);
+height: 10px;
 }
 
 body h2{
