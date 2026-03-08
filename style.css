@@ -779,7 +779,7 @@ text-align: left;
   .container1 {
     width: 100%;
     position: relative;
-    height:65vh;
+    height:fit-content;
   }
   .container2 {
     width:100%;
@@ -796,6 +796,7 @@ text-align: left;
   .brand40{
     width:100%;
   }
+
 }
 
 @media (max-width: 600px) {
