@@ -55,3 +55,27 @@ document.addEventListener("DOMContentLoaded", () => {
   hiddenElements.forEach((el) => observer.observe(el));
 
 });
+
+
+
+const filters = document.querySelectorAll('.filter');
+const items = document.querySelectorAll('.item');
+
+filters.forEach(filter => {
+  filter.addEventListener('click', () => {
+    filters.forEach(f => f.classList.remove('active'));
+    filter.classList.add('active');
+
+    const category = filter.dataset.category;
+
+    items.forEach(item => {
+      const categories = item.dataset.category.split(" ");
+
+      if (category === 'all' || categories.includes(category)) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+  });
+});

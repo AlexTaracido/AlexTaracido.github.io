@@ -6,8 +6,6 @@
         <link rel="icon" type="image/x-icon" href="Images/Favicon PL.png">
       </head>
 
-    <script src="app.js"></script>
-
 <body>
 
   <div id="splash" class="splash">
@@ -48,14 +46,23 @@ Check out my Youtube for more long-form motion graphics!        </p>
 </div>
 
 <div class="container2">
+  <div style="width:100%; margin-top:20px;" class="filters hr">
+    <span class="filter active" data-category="all">[all]</span>
+    <span class="filter" data-category="typography">[typography]</span>
+    <span class="filter" data-category="branding">[branding]</span>
+    <span class="filter" data-category="illustration">[illustration]</span>
+    <span class="filter" data-category="motion">[motion]</span>
+  </div>
+
+
     <div class="column">
       <a href="Pigeons-Nest.html">
-        <img class="project-button" src="Images/PN-Phone-Mockups.png">
+        <img class="project-button item" src="Images/PN-Phone-Mockups.png" data-category="branding illustration">
       </a>
     </div>
     <div class="column">
       <a href="montreal.html">
-        <img class="project-button" src="Images/Red Bus Mockup copy.png">
+        <img class="project-button item" src="Images/Red Bus Mockup copy.png" data-category="typography branding illustration">
       </a>
     </div>
   </div>
@@ -63,12 +70,12 @@ Check out my Youtube for more long-form motion graphics!        </p>
   <div class="container2">
     <div class="column">
       <a href="jumpstart.html">
-        <img class="project-button" style="background-color: #f8dcb9; " src="Images/Rabbit-Jumping-Ombre.gif">
+        <img class="project-button item" style="background-color: #f8dcb9; " src="Images/Rabbit-Jumping-Ombre.gif" data-category="branding motion">
       </a>
     </div>
     <div class="column">
       <a href="Night-Gallery.html">
-        <img class="project-button" src="Images/Business Cards Mockups copy.png">
+        <img class="project-button item" src="Images/Business Cards Mockups copy.png" data-category="branding typography">
       </a>
     </div>
   </div>
@@ -76,12 +83,12 @@ Check out my Youtube for more long-form motion graphics!        </p>
   <div class="container2">
     <div class="column">
       <a href="Estados.html">
-        <img class="project-button" src="Images/Estados.png">
+        <img class="project-button item" src="Images/Estados.png" data-category="illustration">
       </a>
     </div>
     <div class="column">
       <a href="misbhv.html">
-        <img class="project-button" src="Images/misbhv-embroidery-mockup.png">
+        <img class="project-button item" src="Images/misbhv-embroidery-mockup.png" data-category="typography branding motion">
       </a>
     </div>
   </div>
@@ -124,3 +131,4 @@ Check out my Youtube for more long-form motion graphics!        </p>
 
 </html>
 
+<script src="app.js"></script>
